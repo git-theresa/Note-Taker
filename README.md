@@ -20,7 +20,7 @@
  
 
   ##  **Description**
-  file using Node.js
+  Note-Taker is an application that allows a user to create a notes file using Node Express
  
   ## **Installation**
   JSON Package Included
