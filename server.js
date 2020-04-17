@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const uuid = require("uuid");
 const dbjson = require("./db/db.json");
 
 const app = express();
@@ -26,19 +27,29 @@ app.get("/api/notes", function(req, res) {
   });
 
    app.post("/api/notes", function(req, res){
+
+
+    let note = req.body;
+    id = uuid.v4();
+    note.id = `${id}`
+    
     dbjson.push(req.body);
       res.json(newNote);
   });
-  app.delete("/api/notes", function(req, res){
+  app.delete("/api/notes/:id", function(req, res){
     dbjson.delete(req.body);
 
     dbjson.length = 0;
 
     res.json({ ok: true });
   });
+
+
  
-  // 
- 
+
+
+let file_content = fs.readFileSync("db.json");
+let noteList = JSON.parse(file_content)
   //    var newNote = req.body;
 
   // var readonly = req.params.notes;
