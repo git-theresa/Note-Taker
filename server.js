@@ -36,31 +36,32 @@ app.get("/notes", function(req, res) {
 
    app.get("/api/notes", function(req, res){
     readFileAsync("./db/db.json", "utf8").then(data =>{
-    const notesJSON = JSON.parse(data);
+    const notesJSON = JSON.parse(data)
     res.json(notesJSON)
     })
    });
+
     app.post("/api/notes", function (req, res) {
      let note = req.body
     id = uuid.v4
     note.id = `${id}` 
-      readFileAsync(".db/db.json", "utf8").then(data =>{
+      readFileAsync("./db/db.json", "utf8").then(data =>{
       const notesJSON = JSON.parse(data);
       notesJSON.push(newNote);
     
-        writeFileAsync(".db/db.json", JSON.stringify(notesJSON)).then(() => {
+        writeFileAsync("./db/db.json", JSON.stringify(notesJSON)).then(() => {
         res.json(newNote);
         })
     })
   }); 
 
-  app.delete("/api/notes/:id", function(req, res){
-    dbjson.delete(req.body);
+  // app.delete("/api/notes/:id", function(req, res){
+  //   dbjson.delete(req.body);
 
-    dbjson.length = 0;
+  //   dbjson.length = 0;
 
-    res.json({ ok: true });
-  });
+  //   res.json({ ok: true });
+  // });
 
 
  
