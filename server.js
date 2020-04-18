@@ -44,7 +44,7 @@ app.get("/notes", function(req, res) {
     app.post("/api/notes", function (req, res) {
      let newNote = req.body
     let id = uuid.v4
-    note.id = `${id}` 
+    newNote.id = `${id}` 
       readFileAsync("./db/db.json", "utf8").then (data => {
       const notesJSON = JSON.parse(data);
       notesJSON.push(newNote);
