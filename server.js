@@ -7,7 +7,7 @@ const express = require("express");
 const uuid = require("uuid");
 
 // exported file to import in server.js
-const dbjson = require("./db/db.json");
+let dbjson = require("./db/db.json");
 
 // const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -49,7 +49,7 @@ app.post("/api/notes", async function (req, res) {
 
 app.delete("/api/notes/:id", async (req, res) => {
   let deleteNote = req.params.id;
-  // use filter array es6 66-71
+  
   let filteredNotes = [];
   for (var i = 0; i < dbjson.length; i++) {
     if (deleteNote != dbjson[i].id) {
