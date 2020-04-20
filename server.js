@@ -5,6 +5,7 @@ const util = require("util");
 // npm installed
 const express = require("express");
 const uuid = require("uuid");
+
 // exported file to import in server.js
 const dbjson = require("./db/db.json");
 
@@ -45,33 +46,32 @@ app.post("/api/notes", async function (req, res) {
   }
 });
 
-app.delete("/api/notes/:id", async function (req, res) {
+
+app.delete("/api/notes/:id", async (req, res) => {
   let deleteNote = req.params.id;
   // use filter array es6 66-71
-  let filteredArray = [];
+  let filteredNotes = [];
   for (var i = 0; i < dbjson.length; i++) {
     if (deleteNote != dbjson[i].id) {
-      filteredArray.push(dbjson[i]);
+      filteredNotes.push(dbjson[i]);
     }
   }
   // take place of .then (throws error if server crashes)
   try {
-    await writeFileAsync("./db/db.json", JSON.stringify(filteredArray));
+    await writeFileAsync("./db/db.json", JSON.stringify(filteredNotes));
     res.json(newNote);
   } catch (error) {
     res.json(error);
   }
-  dbjson = filteredArray;
+  dbjson = filteredNotes;
 
-  res.json({ ok: true });
+  res.json({ ok: true });           
 });
+
 
 // Listener
 // ===========================================================
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });
-//  let  newNote = id(req.params.newNoteId).then(newNote => {
-// if(!newNote) {
-// promisify fsWritefile. This allows to use .then(which is a promise); therefore, await returns a promise.
-// Async "Awaits" for the return. Await has to be in ans asyncronys function
+
