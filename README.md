@@ -8,29 +8,34 @@
   # **Project** Note Taker
   
   ##  **_Live Link_** 
-  *  ~~_Insert Live Link Once Generated_~~
+  * https://pure-sea-28508.herokuapp.com/
   
   ##  **Table of Contents**
   * Description
-  * Installation
   * Technology Stack
+  * Installation
   * Usage
+  * Contributors
   * Contact
-  * License
+  
  
 
   ##  **Description**
   Note-Taker is an application that allows a user to create a notes file using Node Express
  
+ <img   src="assets/images/notetakerSH1.png" alt="screenshot" />
+ 
   ## **Installation**
   JSON Package Included
 
-  <img   src="assets/" alt="screenshot" />
+ 
  
   ## **Technology Stack**
  HTML, CSS, JavaScript, jQuery, Node.Js, Node Express
 
   ##  **Usage**
+
+<img   src="assets/images/notesSH.png" alt="screenshot" />
 
   #### **Contributors** 
 * @git-theresa
@@ -40,5 +45,3 @@
 * :e-mail:  Email: [t.eatherly@gmail.com](t.eatherly@gmail.com)
 * :earth_americas:  LinkedIn: [https://www.linkedin.com/in/theresa-eatherly-4362b14a/](https://www.linkedin.com/in/theresa-eatherly-4362b14a/)
 
-##### **License** 
-MIT

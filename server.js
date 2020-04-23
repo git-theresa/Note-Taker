@@ -9,7 +9,6 @@ const uuid = require("uuid");
 // exported file to import in server.js
 let dbjson = require("./db/db.json");
 
-// const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
 const app = express();
@@ -49,14 +48,13 @@ app.post("/api/notes", async function (req, res) {
 
 app.delete("/api/notes/:id", async (req, res) => {
   let deleteNote = req.params.id;
-  
   let filteredNotes = [];
   for (var i = 0; i < dbjson.length; i++) {
     if (deleteNote != dbjson[i].id) {
       filteredNotes.push(dbjson[i]);
     }
   }
-  // take place of .then (throws error if server crashes)
+  // (throws error if server crashes)
   try {
     await writeFileAsync("./db/db.json", JSON.stringify(filteredNotes));
     res.json(newNote);
@@ -67,7 +65,6 @@ app.delete("/api/notes/:id", async (req, res) => {
 
   res.json({ ok: true });           
 });
-
 
 // Listener
 // ===========================================================
