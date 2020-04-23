@@ -5,6 +5,7 @@ const util = require("util");
 // npm installed
 const express = require("express");
 const uuid = require("uuid");
+const CFonts = require("cfonts");
 
 // exported file to import in server.js
 let dbjson = require("./db/db.json");
@@ -72,3 +73,17 @@ app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });
 
+CFonts.say("Prestige WorldWide Marketing", {
+  font: "block",
+  align: "center",
+  colors: ["candy", "candy", "candy"],
+  background: "transparent",
+  letterSpacing: 1,
+  lineHeight: 1,
+  space: true,
+  maxLength: "0",
+  gradient: true,
+  independentGradient: false,
+  transitionGradient: false,
+  env: "node",
+});
