@@ -18,17 +18,15 @@
   * Contributors
   * Contact
   
- 
-
   ##  **Description**
   Note-Taker is an application that allows a user to create a notes file using Node Express
  
+
  <img   src="assets/images/notetakerSH1.png" alt="screenshot" />
  
+
   ## **Installation**
   JSON Package Included
-
- 
  
   ## **Technology Stack**
  HTML, CSS, JavaScript, jQuery, Node.Js, Node Express
@@ -36,6 +34,8 @@
   ##  **Usage**
 
 <img   src="assets/images/notesSH.png" alt="screenshot" />
+
+
 
   #### **Contributors** 
 * @git-theresa
