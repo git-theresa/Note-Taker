@@ -22,7 +22,7 @@
   Note-Taker is an application that allows a user to create a notes file using Node Express
  
 
- <img   src="assets/images/notetakerSH1.png" alt="screenshot" />
+ <img   src="assets/notetakerSH1.png" alt="screenshot" />
  
 
   ## **Installation**
@@ -33,7 +33,10 @@
 
   ##  **Usage**
 
-<img   src="assets/images/notesSH.png" alt="screenshot" />
+  Click on the above link. To start, click on the Notes Title Body and type your new Title. You can "tab" into the notes body or click into the notes body. After typing notes, click the save icon. To delete, click on the Note Title to view the note, then click the trash can icon to delete!
+  
+
+<img   src="assets/notesSH2.png" alt="screenshot" />
 
 
 
